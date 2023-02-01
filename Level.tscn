@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 960, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 540 )
+
+[node name="Level" type="Node2D"]
+
+[node name="Pared superior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared superior"]
+position = Vector2( 960, -10 )
+shape = SubResource( 1 )
+
+[node name="Pared inferior" type="StaticBody2D" parent="."]
+position = Vector2( 0, 1100 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared inferior"]
+position = Vector2( 960, -10 )
+shape = SubResource( 1 )
+
+[node name="Arco Enemie" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arco Enemie"]
+position = Vector2( -10, 540 )
+shape = SubResource( 2 )
+
+[node name="Arco Player" type="Area2D" parent="."]
+position = Vector2( 1940, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arco Player"]
+position = Vector2( -10, 540 )
+shape = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 460 )
