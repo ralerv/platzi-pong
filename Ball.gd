@@ -5,6 +5,9 @@ var direction = Vector2.ZERO
 var is_moving = false
 
 func _ready():
+	reset_ball()
+
+func reset_ball():
 	randomize()
 	speed = 600
 	direction.x = [-1 ,1][randi()%2]
