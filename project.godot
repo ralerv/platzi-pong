@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Platzi Pong"
 run/main_scene="res://Level.tscn"
-config/icon="res://icon.png"
+config/icon="res://ralerv pong.png"
 
 [display]
 
