@@ -79,5 +79,8 @@ valign = 1
 [node name="Ball" parent="." instance=ExtResource( 2 )]
 position = Vector2( 960, 540 )
 
+[node name="RestartTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Arco Enemie" to="." method="_on_Arco_Enemie_body_entered"]
 [connection signal="body_entered" from="Arco Player" to="." method="_on_Arco_Player_body_entered"]
+[connection signal="timeout" from="RestartTimer" to="Ball" method="_on_RestartTimer_timeout"]

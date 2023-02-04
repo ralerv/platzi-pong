@@ -3,6 +3,9 @@ extends Node2D
 var PlayerScore = 0
 var EnemieScore = 0
 
+func _ready():
+	_restart_game()
+
 func _process(delta): #pensado más para interfaz
 	$ScoreJugador.text = str(PlayerScore)
 	$ScoreEnemie.text = str(EnemieScore)
@@ -27,4 +30,5 @@ func _restart_game():
 	$Ball.is_moving = false
 	$Ball.direction = Vector2.ZERO
 	$Ball.position = Vector2(960,altura)
-	$Ball.reset_ball()
+	#$Ball.reset_ball()
+	$RestartTimer.start()
