@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Efecto de sonido de puntos-YoutubeConvert.cc.ogg-1f3e58aec1901ed2791e5dffafd06871.oggstr"
+
+[deps]
+
+source_file="res://Efecto de sonido de puntos-YoutubeConvert.cc.ogg"
+dest_files=[ "res://.import/Efecto de sonido de puntos-YoutubeConvert.cc.ogg-1f3e58aec1901ed2791e5dffafd06871.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

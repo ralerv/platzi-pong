@@ -7,6 +7,17 @@ func _process(delta): #pensado más para interfaz
 	$ScoreJugador.text = str(PlayerScore)
 	$ScoreEnemie.text = str(EnemieScore)
 
+func _on_Arco_Player_body_entered(body):
+	if body.name == "Ball":
+		$"Arco Enemie/AudioJugador".play()
+		PlayerScore += 1
+		_restart_game()
+
+func _on_Arco_Enemie_body_entered(body):
+	if body.name == "Ball":
+		$"Arco Player/AudioEnemie".play()
+		EnemieScore += 1
+		_restart_game()
 
 func _restart_game():
 	randomize()
@@ -17,13 +28,3 @@ func _restart_game():
 	$Ball.direction = Vector2.ZERO
 	$Ball.position = Vector2(960,altura)
 	$Ball.reset_ball()
-
-func _on_Arco_Player_body_entered(body):
-	if body.name == "Ball":
-		PlayerScore += 1
-		_restart_game()
-
-func _on_Arco_Enemie_body_entered(body):
-	if body.name == "Ball":
-		EnemieScore += 1
-		_restart_game()
